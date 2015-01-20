@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snakey Snake</title>
+
+    <style>
+      html, body, section, ul, li, h2, h3, div{
+        padding: 0;
+        margin: 0;
+        border: 0;
+        font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+      }
+
+      body{
+        background-image: url("css/background.jpeg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .group:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+
+      h2 {
+        margin: 10px 0 5px 0 auto;
+        font-size: 350%;
+        color: red;
+        display: box;
+        text-align: center;
+        text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+      }
+
+      h3 {
+        font-size: 220%;
+        text-align: center;
+        color: red;
+        text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+
+      }
+
+      ul {
+        height: 500px;
+        margin: 50px auto;
+        list-style: none;
+        width: 500px;
+        border: 5px solid steelblue;
+      }
+
+      div {
+        font-size: 300%;
+      }
+
+      li {
+        height: 48px;
+        width: 48px;
+        float: left;
+        border: 1px solid lightsteelblue;
+        background: lightgoldenrodyellow;
+      }
+
+      li.apple {
+        background-image: url("css/apple.png");
+        background-size: cover;
+      }
+
+      li.snake {
+        background-image: url("css/snake.png");
+        background-size: 48px 48px;
+      }
+
+      li.s-snake {
+        background-image: url("css/Snake__Head.png");
+        background-size: 48px 48px;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      li.n-snake {
+        background-image: url("css/Snake__Head.png");
+        background-size: 48px 48px;
+      }
+
+      li.w-snake {
+        background-image: url("css/Snake__Head.png");
+        background-size: 48px 48px;
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+      }
+
+      li.e-snake {
+        background-image: url("css/Snake__Head.png");
+        background-size: 48px 48px;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <script src="js/jquery-2.1.1.js"></script>
+
+    <script src="js/snake.js"></script>
+    <script src="js/snake-view.js"></script>
+    <h2>Snake!</h2>
+    <h3>Apples Eaten: <div></div></h3>
+      <ul class="group">
+
+
+
+      </ul>
+
+
+
+
+    <script>
+      $(document).on("ready", function(){
+
+        for (var i = 0; i < 100; i++) {
+          var $newLi = $("<li>");
+          $newLi.data("pos", [Math.floor(i / 10), i % 10]);
+          $("ul").append($newLi);
+        }
+
+        var view = new Snakey.View($("pre"));
+      });
+    </script>
+  </body>
+</html>
