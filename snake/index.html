@@ -12,12 +12,17 @@
         font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
       }
 
+      html {
+        height: 100%;
+      }
+
       body{
         background-image: url("css/background.jpeg");
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        height: 100%;
       }
 
       .group:after {
@@ -26,10 +31,37 @@
         clear: both;
       }
 
+      .side {
+        float: left;
+        width: 30%;
+        display: block;
+        margin-top: 50px;
+      }
+
+      button.start {
+        background: darkgreen;
+        border: none;
+        color: white;
+        font-size: 20px;
+        padding: 5px 5px;
+        display: block;
+        margin: 10px auto;
+        border-radius: 5px;
+        box-shadow: 0 5px black;
+        cursor: pointer;
+        outline: none;
+      }
+
+      button.start:active {
+        outline: none;
+        position: relative;
+        top: 5px;
+        box-shadow: none;
+      }
 
       h2 {
         margin: 10px 0 5px 0 auto;
-        font-size: 350%;
+        font-size: 40px;
         color: red;
         display: box;
         text-align: center;
@@ -41,7 +73,7 @@
       }
 
       h3 {
-        font-size: 220%;
+        font-size: 30px;
         text-align: center;
         color: red;
         text-shadow:
@@ -58,11 +90,10 @@
         list-style: none;
         width: 500px;
         border: 5px solid steelblue;
+        float: left;
+        display: block;
       }
 
-      div {
-        font-size: 300%;
-      }
 
       li {
         height: 48px;
@@ -122,13 +153,17 @@
     </style>
   </head>
 
-  <body>
+  <body class="group">
     <script src="js/jquery-2.1.1.js"></script>
 
     <script src="js/snake.js"></script>
     <script src="js/snake-view.js"></script>
-    <h2>Snake!</h2>
-    <h3>Apples Eaten: <div></div></h3>
+    <section class="side">
+
+      <h2>Snake!</h2>
+      <h3>Apples Eaten: <div>0</div></h3>
+      <button class="start">Start Game</button>
+    </section>
       <ul class="group">
 
 
@@ -148,6 +183,10 @@
         }
 
         var view = new Snakey.View($("pre"));
+        $('button.start').on('click', function () {
+          view.start();
+          this.remove();
+        });
       });
     </script>
   </body>
