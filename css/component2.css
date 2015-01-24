@@ -3,6 +3,46 @@ header {
 	margin: auto;
 	font-size: 2em;
 	font-weight: 700;
+	background: black;
+	color: white;
+}
+
+html body > img {
+	z-index: -5;
+	position: absolute;
+	width: auto;
+	min-height: 100px;
+
+}
+
+h4 {
+	font-size: 1.6em;
+	margin: 10px 0 10px 0;
+}
+
+section img {
+	display: block;
+	border-radius: 40%;
+	border: 1px solid black;
+	float: right;
+	height: 15em;
+	margin-top: 5px;
+}
+
+section {
+	color: white;
+}
+
+p {
+	margin-bottom: 10px;
+	display: block;
+	color: white;
+	font-size: 1.3em;
+}
+
+h2 {
+	text-align: center;
+	color: white;
 }
 
 .rb-grid {
@@ -12,7 +52,7 @@ header {
 }
 
 .rb-grid li {
-	width: 48%;
+	width: 32%;
 	height: 30em;
 	margin: 0.5%;
 	background: #8CC7DF;
@@ -126,7 +166,6 @@ header {
 .rb-grid li:nth-child(1) { background: #3399CC; }
 .rb-grid li:nth-child(2) { background: #33CCCC; }
 .rb-grid li:nth-child(3) { background: #996699; }
-.rb-grid li:nth-child(4) { background: #C24747; }
 
 
 /* Overlay Columns */
@@ -137,9 +176,6 @@ header {
 
 
 .rb-grid li:nth-child(3) .rb-week > div:nth-child(1) { background: #996699; }
-
-
-.rb-grid li:nth-child(4) .rb-week > div:nth-child(1) { background: #C24747; }
 
 
 
