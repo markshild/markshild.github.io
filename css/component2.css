@@ -29,6 +29,7 @@ section a {
 	height: 15em;
 	margin-top: 5px;
 	overflow: hidden;
+	postion: relative;
 }
 
 section a img {
@@ -53,6 +54,77 @@ p a {
 	display: block;
 	margin: 20px auto;
 
+}
+
+a.res {
+	positon: relative;
+}
+a.res:before {
+	opacity: 0;
+	content: 'Click to see my resume';
+	position: absolute;
+	top: 260px;
+	display: block;
+	color: white;
+	background: black;
+	padding: 3px 5px;
+	border-radius: 5px;
+	z-index: 20;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+a.res:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	top: 250px;
+	transform: translateX(104px) rotate(45deg);
+	-webkit-transform: translateX(104px) rotate(45deg);
+	display: block;
+	background: black;
+	padding: 10px 10px;
+	z-index: 10;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+a.res:hover:before {
+	opacity: 1;
+	content: 'Click to see my resume';
+	position: absolute;
+	top: 260px;
+	display: block;
+	color: white;
+	background: black;
+	padding: 3px 5px;
+	border-radius: 5px;
+	z-index: 20;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+a.res:hover:after {
+	opacity: 1;
+	content: '';
+	position: absolute;
+	top: 250px;
+	transform: translateX(104px) rotate(45deg);
+	-webkit-transform: translateX(104px) rotate(45deg);
+	display: block;
+	background: black;
+	padding: 10px 10px;
+	z-index: 10;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
 }
 
 .me a {
