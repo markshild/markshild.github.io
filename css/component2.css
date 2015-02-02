@@ -21,7 +21,7 @@ h4 {
 	color: white;
 }
 
-section a {
+section span {
 	display: block;
 	border-radius: 40%;
 	border: 1px solid black;
@@ -32,7 +32,7 @@ section a {
 	postion: relative;
 }
 
-section a img {
+section span img {
 	display: block;
 	height: 100%;
 	width: auto;
@@ -56,10 +56,10 @@ p a {
 
 }
 
-a.res {
+span.res {
 	positon: relative;
 }
-a.res:before {
+span.res:before {
 	opacity: 0;
 	content: 'Click to see my resume';
 	position: absolute;
@@ -76,7 +76,7 @@ a.res:before {
 	transition: all 1s ease-in-out;
 }
 
-a.res:after {
+span.res:after {
 	opacity: 0;
 	content: '';
 	position: absolute;
@@ -93,9 +93,9 @@ a.res:after {
 	transition: all 1s ease-in-out;
 }
 
-a.res:hover:before {
+span.res:hover:before {
 	opacity: 1;
-	content: 'Click to see my resume';
+	content: 'Hi there, nice to meet you!';
 	position: absolute;
 	top: 260px;
 	display: block;
@@ -110,7 +110,19 @@ a.res:hover:before {
 	transition: opacity 1s ease-in-out;
 }
 
-a.res:hover:after {
+.l {
+	float: left;
+	color: white;
+	margin-left: 10px;
+}
+
+.r {
+	float: right;
+	color: white;
+	margin-right: 10px;
+}
+
+span.res:hover:after {
 	opacity: 1;
 	content: '';
 	position: absolute;
