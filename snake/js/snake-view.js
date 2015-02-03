@@ -5,15 +5,16 @@
 
   var View = Snakey.View = function ($el) {
     this.$el = $el;
-    this.board = new Snakey.Board(10, $el);
+    this.board = new Snakey.Board(10, $el, this);
   };
 
   View.prototype.start = function () {
-    window.setInterval(function () {
-      this.board.snake.move();
+    this.m = window.setInterval(function () {
+      this.board.snake.move()
+
       this.board.render();
     }.bind(this), 200); //sets speed of game
-    window.setInterval(function() {
+    this.a = window.setInterval(function() {
       this.board.addApple();
     }.bind(this), 5000); // sets how often new apples render
     this.bindEvents();

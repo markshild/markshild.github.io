@@ -3,9 +3,10 @@
     window.Snakey = {};
   }
 
-  var Snake = Snakey.Snake = function (board) {
+  var Snake = Snakey.Snake = function (board, view) {
     this.dir = "S";
     this.board = board
+    this.view = view
     //initializes snake as two segments on board
     this.segments = [[3,3], [2,3]];
 
@@ -24,8 +25,13 @@
     var add = this.head.plus(this.dir);
 
     if (this.board.offBoard(add) || this.board.grid[add[0]][add[1]] === "s") {
-      alert("You Lose ... Please try again!");
-      window.location.reload();
+      $('body').append($('<section class="lose">You lose... try again?<button class="restart">Retry</button></section>'));
+      clearInterval(this.view.m);
+      clearInterval(this.view.a);
+      $('.restart').on('click', function () {
+        window.location.reload();
+      });
+      return;
     }
 
     if (this.board.grid[add[0]][add[1]] !== "A") {
@@ -66,7 +72,7 @@
     return this.pos;
   };
 
-  var Board = Snakey.Board = function (dim) {
+  var Board = Snakey.Board = function (dim, el, view) {
 
     this.dim = dim
     this.grid = []
@@ -79,7 +85,7 @@
       }
     }
 
-    this.snake = new Snake(this);
+    this.snake = new Snake(this, view);
   };
 
   Board.prototype.offBoard = function(pos) {

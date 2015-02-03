@@ -148,6 +148,49 @@
         transform: rotate(90deg);
       }
 
+      section.lose {
+        position: absolute;
+        z-index: 5;
+        background: grey;
+        color: white;
+        top: 50%;
+        left: 50%;
+        display: block;
+        height: 120px;
+        width: 240px;
+        font-size: 22px;
+        padding: 5px 10px 0 10px;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: center;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        box-shadow: 0 0 300px black;
+      }
+      button.restart {
+        background: darkgreen;
+        border: none;
+        color: white;
+        font-size: 20px;
+        padding: 5px 5px;
+        display: block;
+        margin: 10px auto;
+        border-radius: 5px;
+        box-shadow: 0px 5px black;
+        cursor: pointer;
+        outline: none;
+      }
+
+      button.restart:active {
+        outline: none;
+        position: relative;
+        top: 5px;
+        box-shadow: none;
+      }
+
 
 
     </style>
