@@ -169,8 +169,8 @@ h2 {
 }
 
 .rb-grid li {
-	width: 32%;
-	height: 30em;
+	width: 49%;
+	height: 25em;
 	margin: 0.5%;
 	background: #8CC7DF;
 	color: #fff;
@@ -255,43 +255,53 @@ h2 {
 }
 
 .rb-week span {
-	padding: 0 0 5% 0;
+	padding: 0 0 1% 0;
 	font-size: 1em;
 	font-weight: 100;
 	display: block;
-	margin: 0 0 5% 0;
+	margin: 1% auto;
 	height: 30%;
-	width: 100%;
+	width: 50%;
 	line-height: 0.8;
 }
 
 .rb-week span.rb-city {
 	font-weight: 700;
-	padding: 1% 10%;
+	padding: 1% 5%;
 	font-size: 1em;
 	line-height: 1.2;
 }
 
 .rb-week p.text {
 	font-size: 3em;
+	display: block;
+}
+
+.rb-week p.text a {
+	width: 60%;
+	height: auto;
 }
 
 /* Colors */
 
 /* Grid */
 .rb-grid li:nth-child(1) { background: #3399CC; }
-.rb-grid li:nth-child(2) { background: #33CCCC; }
-.rb-grid li:nth-child(3) { background: #996699; }
+.rb-grid li:nth-child(2) { background: #4EB556; }
+.rb-grid li:nth-child(3) { background: #34BDBF; }
+.rb-grid li:nth-child(4) { background: #1F4B91; }
 
 
 /* Overlay Columns */
 .rb-grid li:nth-child(1) .rb-week > div:nth-child(1) { background: #3399CC; }
 
 
-.rb-grid li:nth-child(2) .rb-week > div:nth-child(1) { background: #33CCCC; }
+.rb-grid li:nth-child(2) .rb-week > div:nth-child(1) { background: #4EB556; }
 
 
-.rb-grid li:nth-child(3) .rb-week > div:nth-child(1) { background: #996699; }
+.rb-grid li:nth-child(3) .rb-week > div:nth-child(1) { background: #34BDBF; }
+
+
+.rb-grid li:nth-child(4) .rb-week > div:nth-child(1) { background: #1F4B91; }
 
 
 
